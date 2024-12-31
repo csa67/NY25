@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Message from Arathy</title>
+    <style>
+        body {
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            background-color: black;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        h1 {
+            color: silver;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: gold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgb(47, 34, 3);
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 70%;
+            background: radial-gradient(circle, gold, rgba(234, 214, 82, 0.5));;
+        }
+
+        .circle.top-left {
+            width: 150px;
+            height: 150px;
+            top: -55px; /* Half of the circle's height to make it appear at the edge */
+            left: -45px; /* Half of the circle's width to make it appear at the edge */
+        }
+
+        .circle.bottom-right {
+            width: 200px;
+            height: 200px;
+            bottom: -80px; /* Half of the circle's height to make it appear at the edge */
+            right: -100px; /* Half of the circle's width to make it appear at the edge */
+        }
+    </style>
+</head>
+<body>
+    <h1>You've got a surprise from Arathy!</h1>
+    <button onclick="window.location.href='greeting.html'">Open it</button>
+    <div class="circle top-left"></div>
+    <div class="circle bottom-right"></div>
+</body>
+</html>
