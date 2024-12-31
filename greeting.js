@@ -11,7 +11,10 @@ camera.position.set(0,0,50);
 camera.lookAt(0,0,0);
 
 const renderer = new THREE.WebGLRenderer({antialias: true});
-renderer.setSize(320,400);
+
+// Adjust renderer size dynamically based on the window size
+renderer.setSize(window.innerWidth * 0.4, window.innerHeight * 0.5);
+
 document.getElementById('sphere').appendChild(renderer.domElement);
 
 const geometry = new THREE.SphereGeometry( 15, 32, 16 ); 
