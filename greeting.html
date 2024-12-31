@@ -68,6 +68,35 @@
             }
         }
 
+        @media screen and (max-width: 768px) {
+    .year {
+        font-size: 5rem; /* Further reduce font size */
+        gap: 0; /* Minimize gap */
+    }
+
+    #sphere {
+        width: 15vw; /* Scale down sphere for small screens */
+    }
+
+    .greeting_msg {
+        font-size: 1.5rem; /* Adjust font size */
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .year {
+        font-size: 4rem; /* Smallest size for very narrow screens */
+    }
+
+    #sphere {
+        width: 12vw;
+    }
+
+    .greeting_msg {
+        font-size: 1.2rem;
+    }
+}
 		</style>
 	</head>
 	<body>

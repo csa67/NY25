@@ -15,6 +15,13 @@ const renderer = new THREE.WebGLRenderer({antialias: true});
 // Adjust renderer size dynamically based on the window size
 renderer.setSize(window.innerWidth * 0.4, window.innerHeight * 0.5);
 
+window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth * 0.4, window.innerHeight * 0.5);
+    camera.aspect = renderer.domElement.width / renderer.domElement.height;
+    camera.updateProjectionMatrix();
+});
+
+
 document.getElementById('sphere').appendChild(renderer.domElement);
 
 const geometry = new THREE.SphereGeometry( 15, 32, 16 ); 
