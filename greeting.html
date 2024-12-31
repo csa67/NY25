@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>New Year 25 Greeting!</title>
+		   <!-- Importing Lobster font -->
+		   <link rel="preconnect" href="https://fonts.googleapis.com">
+		   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+		<style>
+		
+		body {
+            height: 100vh;
+            margin: 0;
+			overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            text-align: center;
+            flex-direction: column;
+			position: relative;
+        }
+
+        .year {
+            font-size: 12rem;
+            font-weight: bold;
+            color: gold;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            text-shadow: 0 0 10px gold, 0 0 10px gold;
+			z-index: 3;
+			 font-family: 'Lobster', cursive; 
+        }
+
+        .greeting_msg {
+            color: gold;
+            font-size: 3rem;
+            margin-top: -150px; /* Reduce spacing to bring it closer to the year */
+            z-index: 2;
+			font-family: 'Lobster', cursive;
+        }
+
+			#sphere{
+				width:160px;
+				height: 400px;
+			}
+
+			.glitter {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, gold, rgba(255, 223, 0, 0.5));
+            border-radius: 50%;
+            animation: sparkle 2s infinite ease-in-out;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+		</style>
+	</head>
+	<body>
+	<div class="container">
+		<div class="year">
+			<span>2</span>
+			<div id="sphere"></div>
+			<span>2</span>
+			<span>5</span>
+		</div>
+		<div class="greeting_msg"> <p>Happy new year!</p> </div>
+	</div>
+		<script type="module" src="./greeting.js"></script>
+	</body>
+</html>
